@@ -33,7 +33,7 @@ a {
 
 .inner__text {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     font-size: 24px;
     line-height: 170%;
 
@@ -108,6 +108,9 @@ header::after {
 }
 
 /* Main Section */
+.main__section {
+  margin-bottom: 216px;
+}
 .main__text-container {
     margin-top: 200px;
     margin-left: 105px;
@@ -121,6 +124,7 @@ header::after {
 }
 
 .main__title {
+  margin-left: 25px;
     margin-bottom: .5px;
 }
 
@@ -408,3 +412,45 @@ header::after {
     transform: rotateY(176deg);
     animation-delay: 0.1s;
   }
+
+/* About me Section */
+.about__text-container {
+  text-align: center;
+}
+
+.about__title {
+  margin-bottom: 92px;
+}
+
+.about__text {
+  max-width: 1216px;
+  margin: 0 auto;
+  text-align: start;
+  margin-bottom: 52px;
+}
+
+.about__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 10px;
+  margin: 0 auto;
+
+  background: #000C24;
+  border-radius: 4px;
+  font-family: 'League Spartan', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 128.7%;
+  letter-spacing: 0.0125em;
+
+  color: #FFFFFF;
+}
+
+/* Section Skills */
+.section__skills {
+  margin-top: 176px;
+}
