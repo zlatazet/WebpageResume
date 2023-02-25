@@ -95,6 +95,12 @@ header::after {
     1px  1px 0 #000;
 }
 
+.dropdown__li {
+  position: relative;
+  display: inline-block;
+  margin-right: 64px;
+}
+
 .right__arrow {
     /* Do not touch!!! */
     border: solid black; 
@@ -105,6 +111,45 @@ header::after {
 
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+
+.dropdown__line {
+  display: none;
+}
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown__content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown__content a:hover {background-color: #f1f1f1;}
+
+.dropdown__li:hover .right__arrow {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transition: linear .1s;
+}
+
+.dropdown__li:hover .dropdown__line {
+  display: block;
+  margin-top: 0;
+}
+
+.dropdown__li:hover .dropdown__content {
+  margin-left: -25px;
+  display: block;
+  transition-delay: .3s;
 }
 
 /* Main Section */
@@ -178,7 +223,7 @@ header::after {
     height: 70%;
     margin: 0 auto;
     transform-style:  preserve-3d;
-    animation: roundandround 7.5s 1.3s infinite linear;
+    /* animation: roundandround 7.5s 1.3s infinite linear; */
   }
   .ball .ring {
     position: absolute;
@@ -188,227 +233,227 @@ header::after {
     height: 100%;
     border:6px;
     border-style: dashed;
-    border-radius: 50%;
+    border-radius: 100%;
     opacity: 0;
     animation: show 0.75s forwards ease-in-out;
   }
   .ring:nth-child(1) {
-    color:#8df435;
+    color:#FDE9F5;
     transform: rotateY(4deg);
     animation-delay: 0s;
   }
   .ring:nth-child(2) {
-    color:#a8e526;
+    color:#EFE2F4;
     transform: rotateY(8deg);
     animation-delay: 0.1s;
   }
   .ring:nth-child(3) {
-    color:#c2d11c;
+    color:#E1DAF4;
     transform: rotateY(12deg);
     animation-delay: 0.2s;
   }
   .ring:nth-child(4) {
-    color:#c8cb1b;
+    color:#D2D3F3;
     transform: rotateY(16deg);
     animation-delay: 0.3s;
   }
   .ring:nth-child(5) {
-    color:#deb21a;
+    color:#C4CBF2;
     transform: rotateY(20deg);
     animation-delay: 0.4s;
   }
   .ring:nth-child(6) {
-    color:#ef9621;
+    color:#FDE9F5;
     transform: rotateY(24deg);
     animation-delay: 0.5s;
   }
   .ring:nth-child(7) {
-    color:#f29122;
+    color:#EFE2F4;
     transform: rotateY(28deg);
     animation-delay: 0.6s;
   }
   .ring:nth-child(8) {
-    color:#fb7430;
+    color:#E1DAF4;
     transform: rotateY(32deg);
     animation-delay: 0.7s;
   }
   .ring:nth-child(9) {
-    color:#fe5944;
+    color:#D2D3F3;
     transform: rotateY(36deg);
     animation-delay: 0.8s;
   }
   .ring:nth-child(10) {
-    color:#fe5548;
+    color:#C4CBF2;
     transform: rotateY(40deg);
     animation-delay: 0.9s;
   }
   .ring:nth-child(11) {
-    color:#f83d61;
+    color:#FDE9F5;
     transform: rotateY(44deg);
     animation-delay: 1s;
   }
   .ring:nth-child(12) {
-    color:#ec2b7d;
+    color:#EFE2F4;
     transform: rotateY(48deg);
     animation-delay: 1.1s;
   }
   .ring:nth-child(13) {
-    color:#e82983;
+    color:#E1DAF4;
     transform: rotateY(52deg);
     animation-delay: 1s;
   }
   .ring:nth-child(14) {
-    color:#d41e9f;
+    color:#D2D3F3;
     transform: rotateY(56deg);
     animation-delay: 0.9s;
   }
   .ring:nth-child(15) {
-    color:#bd1aba;
+    color:#C4CBF2;
     transform: rotateY(60deg);
     animation-delay: 0.8s;
   }
   .ring:nth-child(16) {
-    color:#b81ac0;
+    color:#FDE9F5;
     transform: rotateY(64deg);
     animation-delay: 0.7s;
   }
   .ring:nth-child(17) {
-    color:#9c1fd7;
+    color:#EFE2F4;
     transform: rotateY(68deg);
     animation-delay: 0.6s;
   }
   .ring:nth-child(18) {
-    color:#802aea;
+    color:#E1DAF4;
     transform: rotateY(72deg);
     animation-delay: 0.5s;
   }
   .ring:nth-child(19) {
-    color:#7a2dee;
+    color:#D2D3F3;
     transform: rotateY(76deg);
     animation-delay: 0.4s;
   }
   .ring:nth-child(20) {
-    color:#5f40f9;
+    color:#C4CBF2;
     transform: rotateY(80deg);
     animation-delay: 0.3s;
   }
   .ring:nth-child(21) {
-    color:#4657fe;
+    color:#FDE9F5;
     transform: rotateY(84deg);
     animation-delay: 0.2s;
   }
   .ring:nth-child(22) {
-    color:#425cfe;
+    color:#EFE2F4;
     transform: rotateY(88deg);
     animation-delay: 0.1s;
   }
   .ring:nth-child(23) {
-    color:#2f77fb;
+    color:#E1DAF4;
     transform: rotateY(92deg);
     animation-delay: 0s;
   }
   .ring:nth-child(24) {
-    color:#a8e526;
+    color:#D2D3F3;
     transform: rotateY(96deg);
     animation-delay: 0.1s;
   }
   .ring:nth-child(25) {
-    color:#c2d11c;
+    color:#C4CBF2;
     transform: rotateY(100deg);
     animation-delay: 0.2s;
   }
   .ring:nth-child(26) {
-    color:#c8cb1b;
+    color:#FDE9F5;
     transform: rotateY(104deg);
     animation-delay: 0.3s;
   }
   .ring:nth-child(27) {
-    color:#deb21a;
+    color:#EFE2F4;
     transform: rotateY(108deg);
     animation-delay: 0.4s;
   }
   .ring:nth-child(28) {
-    color:#ef9621;
+    color:#E1DAF4;
     transform: rotateY(112deg);
     animation-delay: 0.5s;
   }
   .ring:nth-child(29) {
-    color:#f29122;
+    color:#D2D3F3;
     transform: rotateY(116deg);
     animation-delay: 0.6s;
   }
   .ring:nth-child(30) {
-    color:#fb7430;
+    color:#C4CBF2;
     transform: rotateY(120deg);
     animation-delay: 0.7s;
   }
   .ring:nth-child(31) {
-    color:#fe5944;
+    color:#FDE9F5;
     transform: rotateY(124deg);
     animation-delay: 0.8s;
   }
   .ring:nth-child(32) {
-    color:#fe5548;
+    color:#EFE2F4;
     transform: rotateY(128deg);
     animation-delay: 0.9s;
   }
   .ring:nth-child(33) {
-    color:#f83d61;
+    color:#E1DAF4;
     transform: rotateY(132deg);
     animation-delay: 1s;
   }
   .ring:nth-child(34) {
-    color:#ec2b7d;
+    color:#D2D3F3;
     transform: rotateY(136deg);
     animation-delay: 1.1s;
   }
   .ring:nth-child(35) {
-    color:#e82983;
+    color:#C4CBF2;
     transform: rotateY(140deg);
     animation-delay: 1s;
   }
   .ring:nth-child(36) {
-    color:#d41e9f;
+    color:#FDE9F5;
     transform: rotateY(144deg);
     animation-delay: 0.9s;
   }
   .ring:nth-child(37) {
-    color:#bd1aba;
+    color:#EFE2F4;
     transform: rotateY(148deg);
     animation-delay: 0.8s;
   }
   .ring:nth-child(38) {
-    color:#b81ac0;
+    color:#E1DAF4;
     transform: rotateY(152deg);
     animation-delay: 0.7s;
   }
   .ring:nth-child(39) {
-    color:#9c1fd7;
+    color:#D2D3F3;
     transform: rotateY(156deg);
     animation-delay: 0.6s;
   }
   .ring:nth-child(40) {
-    color:#802aea;
+    color:#C4CBF2;
     transform: rotateY(160deg);
     animation-delay: 0.5s;
   }
   .ring:nth-child(41) {
-    color:#7a2dee;
+    color:#FDE9F5;
     transform: rotateY(164deg);
     animation-delay: 0.4s;
   }
   .ring:nth-child(42) {
-    color:#5f40f9;
+    color:#EFE2F4;
     transform: rotateY(168deg);
     animation-delay: 0.3s;
   }
   .ring:nth-child(43) {
-    color:#4657fe;
+    color:#E1DAF4;
     transform: rotateY(172deg);
     animation-delay: 0.2s;
   }
   .ring:nth-child(44) {
-    color:#425cfe;
+    color:#D2D3F3;
     transform: rotateY(176deg);
     animation-delay: 0.1s;
   }
@@ -453,4 +498,118 @@ header::after {
 /* Section Skills */
 .section__skills {
   margin-top: 176px;
+  position: relative;
+  margin-bottom: 193px;
+}
+
+.skills-container {
+  display: flex;
+}
+
+.skills__title {
+  margin: 0 auto 54px 157px;
+}
+
+.skills__p {
+  max-width: 617px;
+
+  margin-left: 111px;
+  margin-bottom: 65px;
+}
+
+.skills__picture-laptop {
+  margin-left: 148px;
+}
+
+.skills__picture-bg {
+  position: absolute;
+  right: 0;
+  top: -430px;
+  z-index: -1;
+}
+
+.card__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 725px;
+}
+
+.card__wrapper .card {
+  position: relative;
+  width: 170px;
+  height: 200px;
+}
+
+.card__percentage {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  transform: rotate(-270deg);
+}
+
+.card__percentage svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.circle__percentage {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 20;
+  stroke: rgba(146, 138, 151, 0.27);;
+  transform: translate(15px, 15px);
+}
+
+.circle__percentage:nth-child(2) {
+  stroke: var(--c1r);
+  stroke-dasharray: 300;
+  stroke-dashoffset: calc(292 - (294 * var(--num)) / 100);
+}
+
+.card__number {
+  position: absolute;
+  transform: rotate(270deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+}
+
+.card__number h3 {
+  font-family: 'League Spartan', sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 13px;
+
+  color: #928A97;
+}
+
+.card__name {
+  margin-top: 8px;
+  margin-left: 30px;
+
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #000C24;
+}
+
+.skills__picture-container {
+  margin-top: 37px;
+}
+
+/* Section Form */
+.section__form {
+  background-image: url("../images/section-bg.png");
+  background-color: #fff;
 }

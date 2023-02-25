@@ -19,12 +19,12 @@
                     <li class="nav__item nav__item-first"><a href="#" target="_blank">Home</a></li>
                     <li class="nav__item"><a href="#" target="_blank">About</a></li>
                     <li class="nav__item"><a href="#" target="_blank">Skills</a></li>
-                    <div>
+                    <div class="dropdown__li">
                         <li class="nav__item"><a href="#">My Projects</a><span class="right__arrow"></span></li>
                         <div class="dropdown__content">
-                            <hr>
-                            <a href="">Coding projects</a>
-                            <a href="">Desing projects</a>
+                            <hr class="dropdown__line">
+                            <a href="#">Coding projects</a><br>
+                            <a href="#">Design projects</a>
                         </div>
                     </div>
                     <li class="nav__item"><a href="#" target="_blank">Education</a></li>
@@ -34,11 +34,11 @@
        </div>
     </header>
 
-    <section class="main__section">
+    <main class="main__section">
         <div class="container">
             <div class="main__text-container">
                 <div class="picture__circle">
-                    <img src="./images/mainSectionCircle.png">
+                    <img src="./images/mainSectionCircle.png" alt="">
                 </div>
                 <h1 class="main__title inner__title">Anastasiia</h1>
                 <p class="main__p">
@@ -102,7 +102,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <section>
         <div class="container">
@@ -121,24 +121,128 @@
     </section>
 
     <section class="section__skills">
+        <div class="container skills-container">
+            <div>
+                <div>
+                    <h1 class="inner__title skills__title">Skills</h1>
+                    <p class="inner__text skills__p">I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.</p>
+                </div>
+                <div class="card__wrapper">
+                    <div class="card">
+                        <figure>
+                            <div class="card__percentage" style="--c1r: #000C24;--num:85;">
+                                <svg>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                </svg>
+                                <div class="card__number">
+                                    <h3>85 <span>%</span></h3>
+                                </div>
+                            </div>
+                            <figcaption class="card__name">HTML</figcaption>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <div class="card__percentage" style="--c1r: #000C24;--num:70;">
+                                <svg>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                </svg>
+                                <div class="card__number">
+                                    <h3>70 <span>%</span></h3>
+                                </div>
+                            </div>
+                            <figcaption class="card__name">CSS</figcaption>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <div class="card__percentage" style="--c1r: #000C24;--num:15;">
+                                <svg>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                </svg>
+                                <div class="card__number">
+                                    <h3>15 <span>%</span></h3>
+                                </div>
+                            </div>
+                            <figcaption class="card__name">JavaScript</figcaption>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <div class="card__percentage" style="--c1r: #000C24;--num:80;">
+                                <svg>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                </svg>
+                                <div class="card__number">
+                                    <h3>80 <span>%</span></h3>
+                                </div>
+                            </div>
+                            <figcaption class="card__name">Figma</figcaption>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <div class="card__percentage" style="--c1r: #000C24;--num:10;">
+                                <svg>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                </svg>
+                                <div class="card__number">
+                                    <h3>10 <span>%</span></h3>
+                                </div>
+                            </div>
+                            <figcaption class="card__name">Git</figcaption>
+                        </figure>
+                    </div>
+                    <div class="card">
+                        <figure>
+                            <div class="card__percentage" style="--c1r: #000C24;--num:85;">
+                                <svg>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
+                                </svg>
+                                <div class="card__number">
+                                    <h3>85 <span>%</span></h3>
+                                </div>
+                            </div>
+                            <figcaption class="card__name">FileZilla</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="skills__picture-container">
+                <div class="skills__picture-laptop"><img src="./images/skills/computer.png"></div>
+                <div class="skills__picture-bg"><img src="./images/skills/bg.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section__form">
         <div class="container">
             <div>
                 <div>
-                    <h1 class="inner__title">Skills</h1>
-                    <p class="inner__text">I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.</p>
+                    <h4>Drop me a line. <br> I would like to hear from you.</h4>
                 </div>
                 <div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
-                    <div class="item"></div>
+                    <h1>Get in Touch</h1>
+                    <form action="" method="get">
+
+                        <label for="">Name</label>
+                        <input type="text">
+
+                        <label for="">Email</label>
+                        <input type="email" name="" id="">
+
+                        <label for="">Message</label>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+                        <button type="submit">Send Message</button>
+                    </form>
                 </div>
-            </div>
-            <div>
-                <div><img src=""></div>
-                <div><img src=""></div>
             </div>
         </div>
     </section>
