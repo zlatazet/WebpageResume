@@ -186,13 +186,13 @@
                     </div>
                     <div class="card">
                         <figure>
-                            <div class="card__percentage" style="--c1r: #000C24;--num:10;">
+                            <div class="card__percentage" style="--c1r: #000C24;--num:30;">
                                 <svg>
                                     <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
                                     <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
                                 </svg>
                                 <div class="card__number">
-                                    <h3>10 <span>%</span></h3>
+                                    <h3>30 <span>%</span></h3>
                                 </div>
                             </div>
                             <figcaption class="card__name">Git</figcaption>
@@ -223,24 +223,24 @@
 
     <section class="section__form">
         <div class="container">
-            <div>
-                <div>
+            <div class="container__flex">
+                <div class="section__text-con">
                     <h4>Drop me a line. <br> I would like to hear from you.</h4>
                 </div>
-                <div>
-                    <h1>Get in Touch</h1>
+                <div class="section__form-container">
+                    <h1 class="inner__title section__title">Get in Touch</h1>
                     <form action="" method="get">
 
-                        <label for="">Name</label>
-                        <input type="text">
+                        <label class="inner__text" for="">Name</label>
+                        <input type="text" placeholder="Place to type">
 
-                        <label for="">Email</label>
-                        <input type="email" name="" id="">
+                        <label class="inner__text" for="">Email</label>
+                        <input type="email" placeholder="Please, type your email here" name="" id="">
 
-                        <label for="">Message</label>
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <label class="inner__text" for="">Message</label>
+                        <textarea placeholder="Place for message you want to leave" name="" id="" cols="30" rows="10"></textarea>
 
-                        <button type="submit">Send Message</button>
+                        <button class="submit-form__button" type="submit">Send Message</button>
                     </form>
                 </div>
             </div>
