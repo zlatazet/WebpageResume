@@ -40,6 +40,22 @@ a {
     color: #000C24;
 }
 
+/* Header Checkbox */
+.check {
+  width: 30px;
+  height: 2px;
+  background: black;
+  transition: 250ms linear;
+}
+
+.check:not(:last-of-type) {
+  margin-bottom: 6px;
+}
+
+.header__checkbox, .check-wrapper {
+  display: none;
+} 
+
 /* Header */
 header {
     position: relative;
@@ -605,7 +621,7 @@ header::after {
 
 .card__name {
   margin-top: 8px;
-  margin-left: 30px;
+  margin-left: 40px;
 
   font-style: normal;
   font-weight: 600;
@@ -742,7 +758,7 @@ input[type=text], [type=email], textarea {
 
 .arrow-up .fa-solid {
   font-size: 70px;
-  color: #FFE1D8;
+  color: #aacef1;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -820,6 +836,10 @@ input[type=text], [type=email], textarea {
     line-height: 150%;
   }
 
+  .nav__item:not(:last-of-type) {
+    margin-right: 45px;
+  }
+
   .scene {
     width: 380px;
     height: 380px;
@@ -843,5 +863,311 @@ input[type=text], [type=email], textarea {
   footer {
     padding-top: 30px;
     padding-bottom: 39px;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .header__checkbox, .check-wrapper {
+    display: block;
+  }
+
+  header::after {
+    content: none;
+  }
+
+  .nav__items-con {
+    display: none;
+  }
+
+  .check-wrapper {
+    position: fixed;
+    right: 10px;
+    z-index: 4;
+    margin-top: 40px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .header__checkbox {
+    position: fixed;
+    z-index: 4;
+    display: block;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    right: 10px;
+    margin-top: 30px;
+  }
+
+  .header__checkbox:checked ~ .check-wrapper>.check:first-of-type {
+    transform: rotate(45deg) translate(3px, 5px);
+  }
+
+  .header__checkbox:checked ~ .check-wrapper>.check:last-of-type {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  .header__checkbox:checked ~ .check-wrapper>.check:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__checkbox:checked ~ .nav__items-con {
+    display: block;
+    position: fixed;
+    background: #FFFFFF;
+    top: -17px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding-left: 0;
+    padding-top: 10%;
+  }
+
+  .nav__items-con {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  nav > div{
+    margin-left: 0;
+  }
+
+  .nav__item {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .scene {
+    display: none;
+  }
+
+  .nav__item:not(:last-of-type) {
+    margin-right: 0;
+  }
+
+  .dropdown__li {
+    margin-right: 0;
+  }
+
+  .dropdown__li:hover .dropdown__content {
+    margin-left: 0;
+  }
+
+  .dropdown__li:hover ~ .nav__item:nth-child(5) {
+    margin-top: 130px;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: linear-gradient(to bottom, #d9e6f3, #fff);
+    height: 100px;
+    width: 100%;
+  }
+
+  .header__container {
+    margin-top: 0;
+  }
+
+  .about__text {
+    max-width: 660px;
+  }
+
+  .inner__title {
+    font-size: 44px;
+    line-height: 35px;
+}
+
+  .inner__text {
+    font-size: 19px;
+    line-height: 130%;
+  }
+
+  .about__title {
+    margin-bottom: 60px;
+  }
+
+  .skills__p {
+    margin-bottom: 35px;
+  }
+
+  .card__wrapper {
+    gap: 25px;
+    max-width: 560px;
+  }
+
+  .container__flex {
+    max-width: 722px;
+  }
+
+  .section__text-con h4 {
+    max-width: 220px;
+    font-size: 23px;
+    line-height: 25px;
+  }
+
+  input[type=text], [type=email], textarea {
+    margin-bottom: 10px;
+  }
+
+  .submit-form__button {
+    margin-bottom: 15px;
+  }
+
+  footer {
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width:750px) {
+  .picture__circle img {
+    width: 80%;
+  }
+
+  .inner__text {
+    max-width: inherit;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .container__flex {
+    max-width: 560px;
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .section__form-container {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width:650px) {
+  .skills__picture-bg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:580px) {
+  .section__skills {
+    margin-top: 68px;
+    margin-bottom: 33px;
+  }
+
+  .card__wrapper {
+    max-width: 365px;
+  }
+
+  .container__flex {
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .section__text-con h4 {
+    max-width: inherit;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .main__text-container {
+    margin-left: 35px;
+  }
+
+  .main__section {
+    margin-bottom: 133px;
+  }
+
+  .skills__picture-laptop img {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .inner__text {
+    font-size: 17px;
+    line-height: 120%;
+  }
+
+  header {
+    height: 70px;
+  }
+
+  .header__checkbox {
+    margin-top: 20px;
+  }
+
+  .card__wrapper {
+    margin-top: 30px;
+  }
+
+  .main__text-container {
+    margin-top: 160px;
+    margin-left: 16px;
+  }
+
+  .inner__title {
+    font-size: 35px;
+    line-height: 12px;
+  }
+
+  .main__p {
+    font-size: 17px;
+    line-height: 29px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+  }
+
+  .social-media__container {
+    margin-left: 25px;
+  }
+
+  .fa-brands {
+    font-size: 25px;
+  }
+
+  .about__title {
+    margin-bottom: 32px;
+  }
+
+  .about__text {
+    margin-bottom: 32px;
+  }
+
+  .card__wrapper {
+    margin-left: -20px;
+  }
+
+  .card__wrapper .card {
+    width: 130px;
+    height: 160px;
+  }
+
+  .skills__picture-laptop img {
+    width: 65%;
+  }
+
+  .container__flex {
+    max-width: 300px;
+  }
+
+  .fa-solid {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width:365px) {
+  .card__wrapper {
+    max-width: 285px;
+  }
+
+  .arrow-up .fa-solid {
+    font-size: 50px;
   }
 }
