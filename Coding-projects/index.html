@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julee&family=League+Spartan:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container header__container">
+            <nav>
+                <input class="header__checkbox" type="checkbox">
+                <div class="check-wrapper">
+                    <div class="check"></div>
+                    <div class="check"></div>
+                    <div class="check"></div>
+                </div>
+                <ul class="nav__items-con">
+                    <li class="nav__item nav__item-first"><a href="../index.html" id="home" target="_parent">Home</a></li>
+                    <li class="nav__item"><a href="../index.html#about-me" id="about" target="_self">About</a></li>
+                    <li class="nav__item"><a href="../index.html#skills-section" id="skills" target="_self">Skills</a></li>
+                    <div class="dropdown__li">
+                        <li class="nav__item"><a target="_self">My Projects</a><span class="right__arrow"></span></li>
+                        <div class="dropdown__content">
+                            <hr class="dropdown__line">
+                            <a href="./index.html" id="coding-projects" target="_parent">Coding projects</a><br>
+                            <a href="../inProcess/index.html" id="design-projects" target="_parent">Design projects</a>
+                        </div>
+                    </div>
+                    <li class="nav__item"><a href="../inProcess/index.html" id="education" target="_parent">Education</a></li>
+                    <li class="nav__item"><a href="../index.html#form-section" id="contact" target="_parent">Contact</a></li>
+                </ul>
+            </nav>
+       </div>
+    </header>
+
+    <main>
+        <div class="cointainer slideshow-container">
+            <div class="mySlides" style="display: flex;">
+                <div class="slide-leftside">
+                    <h3 class="project-name">Hotel landing page</h3>
+                    <p class="project-description" style="margin: 0 0 10px 0;">A landing page for a hotel that is visually appealing and user-friendly. The landing page provides information about the hotel's rooms, reservations, and contact information, making it easy for users to book their stay.</p>
+                    <p class="project-description" style="margin-top: 0;">The page is optimized for mobile devices, ensuring that it looks great and functions smoothly on smartphones and tablets. This was achieved through the use of responsive design techniques, including flexible layouts and optimized media.</p>
+                    <a href="./cootelsLandingPage!/index.html" class="project-button" target="_parent">Give a look</a>
+                    <div class="project-footer">
+                        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angles-left"></i></a>
+                        <span class="number-text">1/2</span>
+                        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-angles-right"></i></a>
+                    </div>
+                </div> 
+                <div class="slide-rightside">
+                    <img class="project-picture" src="./images/1.png" alt="">
+                </div>
+            </div>
+            <div class="mySlides" style="display: flex;">
+                <div class="slide-leftside">
+                    <h3 class="project-name">Foundation</h3>
+                    <p class="project-description">I recently created a website using jQuery technology and animation to bring it to life. jQuery is a popular JavaScript library that allows developers to easily manipulate the DOM, handle events, and create dynamic animations.</p>
+                    <a href="./Foundation/index.html" class="project-button" target="_parent">Give a look</a>
+                    <div class="project-footer">
+                        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angles-left"></i></a>
+                        <span class="number-text">2/2</span>
+                        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-angles-right"></i></a>
+                    </div>
+                </div>
+                <div class="slide-rightside">
+                    <img class="project-picture" src="./images/2.png" alt="Project's picture">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Anastasiia</p>
+            <div class="social-media__container">
+                <a href="https://github.com/zlatazet" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/anastasia-zhelizniak-aa4048239" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/_tamiko._/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <p>All Rights Reserved <i class="fa-solid fa-copyright"></i> 2023 <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

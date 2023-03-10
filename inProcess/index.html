@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inProcess</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julee&family=League+Spartan:wght@100;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-family: 'League Spartan';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 46px;
+            text-align: center;
+
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+	<p id="countdownText">This page is not done yet. User will be returned to the previous one in <span id="countdownTimer">7</span> seconds.</p>
+
+	<script>
+		// Set the starting countdown time in seconds
+		var timeLeft = 7;
+
+		// Set the countdown interval
+		var countdownInterval = setInterval(function() {
+			// Update the countdown timer display
+			document.getElementById('countdownTimer').innerHTML = timeLeft;
+
+			// Decrease the time left by 1 second
+			timeLeft--;
+
+			// If the countdown reaches 0, stop the interval and redirect to the previous page
+			if (timeLeft < 0) {
+				clearInterval(countdownInterval);
+				window.history.back();
+			}
+		}, 1000); // 1000 milliseconds = 1 second
+	</script>
+
+</body>
+</html>
