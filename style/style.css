@@ -999,12 +999,25 @@ input[type=text], [type=email], textarea {
     margin-right: 0;
   }
 
-  .dropdown__li:hover .dropdown__content {
+  .dropdown__li:active .dropdown__content {
     margin-left: 0;
   }
 
   .dropdown__li:hover ~ .nav__item:nth-child(5) {
     margin-top: 130px;
+  }
+
+  .dropdown__content a:active {background-color: #f1f1f1;}
+
+  .dropdown__li:active .right__arrow {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: linear .1s;
+  }
+
+  .dropdown__li:active .dropdown__line {
+    display: block;
+    margin-top: 0;
   }
 
   header {
@@ -1209,9 +1222,6 @@ input[type=text], [type=email], textarea {
 }
 
 @media only screen and (max-width:365px) {
-  .card__wrapper {
-    max-width: 285px;
-  }
 
   .arrow-up .fa-solid {
     font-size: 50px;

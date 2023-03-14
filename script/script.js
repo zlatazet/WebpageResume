@@ -99,3 +99,15 @@ function setProgress6(percent) {
 }
 
 setProgress6(15); // Example: set initial progress to 50%
+
+const progressBar7 = document.querySelector('.progress-bar-7');
+const progressText7 = document.querySelector('.progress-percent-7');
+
+function setProgress7(percent) {
+  const circumference = 339.292;
+  const offset = circumference - percent / 100 * circumference;
+  progressBar7.style.strokeDashoffset = offset;
+  progressText7.innerHTML = `${percent}%`;
+}
+
+setProgress7(25); // Example: set initial progress to 50%
