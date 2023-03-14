@@ -569,6 +569,7 @@ header::after {
   flex-wrap: wrap;
   gap: 40px;
   max-width: 725px;
+  margin-left: 60px;
 }
 
 .card__wrapper .card {
@@ -607,14 +608,14 @@ header::after {
 
 .card__number {
   position: absolute;
-  transform: rotate(270deg);
+  /* transform: rotate(270deg); */
   display: flex;
   justify-content: center;
   align-items: center;
   inset: 0;
 }
 
-.card__number h3 {
+.card__number {
   font-family: 'League Spartan', sans-serif;
   font-style: normal;
   font-weight: 100;
@@ -622,9 +623,12 @@ header::after {
   line-height: 13px;
 
   color: #928A97;
+  transform: rotate(0deg);
 }
 
 .card__name {
+  position: absolute;
+  bottom: -24px;
   margin-top: 8px;
   margin-left: 40px;
 
@@ -640,6 +644,43 @@ header::after {
 .skills__picture-container {
   margin-top: 37px;
 }
+
+/* start */
+.progress-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-background {
+  fill: #eee;
+}
+
+.progress-bar {
+  fill: none;
+  stroke: #000C24;
+  stroke-width: 10;
+  stroke-dasharray: 339.292;
+  stroke-dashoffset: 339.292;
+  /* transform: rotate(-90deg); */
+  transform-origin: center;
+  transition: stroke-dashoffset 1s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* end */
 
 /* Section Form */
 .section__form {
