@@ -760,6 +760,10 @@ input[type=text], [type=email], textarea {
   border-radius: 4px;
 }
 
+form input.error{
+  border-color: red!important;
+}
+
  /* Footer */
  footer {
   text-align: center;
@@ -999,25 +1003,51 @@ input[type=text], [type=email], textarea {
     margin-right: 0;
   }
 
-  .dropdown__li:active .dropdown__content {
+  /* .dropdown__li .nav__item:visited .dropdown__content {
     margin-left: 0;
   }
 
-  .dropdown__li:hover ~ .nav__item:nth-child(5) {
+  .dropdown__li .nav__item:visited ~ .nav__item:nth-child(5) {
     margin-top: 130px;
   }
 
-  .dropdown__content a:active {background-color: #f1f1f1;}
+  .dropdown__content a:hover {background-color: #f1f1f1;}
 
-  .dropdown__li:active .right__arrow {
+  .dropdown__li .nav__item:visited .right__arrow {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transition: linear .1s;
   }
 
-  .dropdown__li:active .dropdown__line {
+  .dropdown__li .nav__item:visited .dropdown__line {
     display: block;
     margin-top: 0;
+  } */
+
+  .dropdown__li .nav__item {
+    display: none;
+  }
+
+  .dropdown__content {
+    display: inline-block;
+    z-index: 0;
+    position: relative;
+    background-color: inherit;
+    box-shadow: none;
+  }
+
+  .dropdown__content a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    padding: 0;
+  }
+
+  .dropdown__content a:last-of-type {
+    margin-bottom: 20px;
   }
 
   header {
@@ -1197,10 +1227,6 @@ input[type=text], [type=email], textarea {
 
   .about__text {
     margin-bottom: 32px;
-  }
-
-  .card__wrapper {
-    margin-left: -20px;
   }
 
   .card__wrapper .card {

@@ -38,7 +38,7 @@ function setProgress1(percent) {
   progressText1.innerHTML = `${percent}%`;
 }
 
-setProgress1(85); // Example: set initial progress to 50%
+setProgress1(85); // Example: set initial progress to 85%
 
 const progressBar2 = document.querySelector('.progress-bar-2');
 const progressText2 = document.querySelector('.progress-percent-2');
@@ -50,7 +50,7 @@ function setProgress2(percent) {
   progressText2.innerHTML = `${percent}%`;
 }
 
-setProgress2(70); // Example: set initial progress to 50%
+setProgress2(70); // Example: set initial progress to 70%
 
 const progressBar3 = document.querySelector('.progress-bar-3');
 const progressText3 = document.querySelector('.progress-percent-3');
@@ -62,7 +62,7 @@ function setProgress3(percent) {
   progressText3.innerHTML = `${percent}%`;
 }
 
-setProgress3(15); // Example: set initial progress to 50%
+setProgress3(35); // Example: set initial progress to 15%
 
 const progressBar4 = document.querySelector('.progress-bar-4');
 const progressText4 = document.querySelector('.progress-percent-4');
@@ -74,7 +74,7 @@ function setProgress4(percent) {
   progressText4.innerHTML = `${percent}%`;
 }
 
-setProgress4(80); // Example: set initial progress to 50%
+setProgress4(80); // Example: set initial progress to 80%
 
 const progressBar5 = document.querySelector('.progress-bar-5');
 const progressText5 = document.querySelector('.progress-percent-5');
@@ -86,7 +86,7 @@ function setProgress5(percent) {
   progressText5.innerHTML = `${percent}%`;
 }
 
-setProgress5(85); // Example: set initial progress to 50%
+setProgress5(85); // Example: set initial progress to 85%
 
 const progressBar6 = document.querySelector('.progress-bar-6');
 const progressText6 = document.querySelector('.progress-percent-6');
@@ -98,7 +98,7 @@ function setProgress6(percent) {
   progressText6.innerHTML = `${percent}%`;
 }
 
-setProgress6(15); // Example: set initial progress to 50%
+setProgress6(30); // Example: set initial progress to 15%
 
 const progressBar7 = document.querySelector('.progress-bar-7');
 const progressText7 = document.querySelector('.progress-percent-7');
@@ -110,4 +110,40 @@ function setProgress7(percent) {
   progressText7.innerHTML = `${percent}%`;
 }
 
-setProgress7(25); // Example: set initial progress to 50%
+setProgress7(35); // Example: set initial progress to 25%
+
+// Get information from the form
+
+
+jQuery(document).ready(function () {
+
+ 
+
+ jQuery('.submit-form__button').click( function() {
+   var form = jQuery(this).closest('form');
+   
+   if ( form.valid() ) {
+     form.css('opacity','.5');
+     var actUrl = form.attr('action');
+
+     jQuery.ajax({
+       url: actUrl,
+       type: 'post',
+       dataType: 'html',
+       data: form.serialize(),
+       success: function(data) {
+         form.html(data);
+         form.css('opacity','1');
+                 form.find('.form__status').html('форма отправлена успешно');
+                 document.getElementById("form").reset();
+                 //$('#myModal').modal('show') // для бутстрапа
+       },
+       error:	 function() {
+            form.find('.form__status').html('серверная ошибка');
+       }
+     });
+   }
+ });
+
+
+});
