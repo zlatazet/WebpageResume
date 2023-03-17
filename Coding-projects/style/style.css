@@ -427,25 +427,30 @@ footer .social-media__container {
         margin-right: 0;
       }
     
-      .dropdown__li .nav__item:visited .dropdown__content {
-        margin-left: 0;
+      .dropdown__li .nav__item {
+        display: none;
       }
     
-      .dropdown__li .nav__item:visited ~ .nav__item:nth-child(5) {
-        margin-top: 130px;
+      .dropdown__content {
+        display: inline-block;
+        z-index: 0;
+        position: relative;
+        background-color: inherit;
+        box-shadow: none;
       }
     
-      .dropdown__content a:hover {background-color: #f1f1f1;}
-    
-      .dropdown__li .nav__item:visited .right__arrow {
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        transition: linear .1s;
+      .dropdown__content a {
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 20px;
+        color: #000000;
+        padding: 0;
       }
     
-      .dropdown__li .nav__item:visited .dropdown__line {
-        display: block;
-        margin-top: 0;
+      .dropdown__content a:last-of-type {
+        margin-bottom: 20px;
       }
   
     header {
