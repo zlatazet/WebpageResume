@@ -181,12 +181,13 @@ main {
 .mySlides {
     display: flex;
     overflow: hidden;
+    position: relative;
 }
 
 .slide-leftside {
     max-width: 35%;
     background: #C5EAFF;
-    padding: 123px 51px 0 51px;
+    padding: 95px 51px 0 51px;
 }
 
 .project-name {
@@ -210,6 +211,13 @@ main {
     margin-bottom: 41px;
 }
 
+.clasification-projects {
+    margin-top: 23px;
+    font-style: italic;
+    color: #A30000;
+    display: block;
+}
+
 .project-button {
     font-style: normal;
     font-weight: 400;
@@ -229,6 +237,9 @@ main {
     padding: 37px 22px 36px 22px;
     margin-left: -51px;
     margin-right: -51px;
+    position: absolute;
+    bottom: 0;
+    width: 35%;
 }
 
 .project-footer .fa-solid {
