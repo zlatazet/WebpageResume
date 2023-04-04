@@ -45,9 +45,7 @@
 
     <main class="main__section">
         <div class="container main__container">
-            <div class="main__text-container">
-                <div class="picture__circle"></div>
-                <h1 class="main__title inner__title">Anastasiia</h1>
+            <div class="picture__circle"><h1 class="main__title inner__title">Anastasiia</h1>
                 <p class="main__p">
                     Junior Front-end Developer
                 </p>
@@ -56,25 +54,25 @@
                     <a href="https://www.linkedin.com/in/anastasia-zhelizniak-aa4048239" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://www.instagram.com/_tamiko._/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 </div>
+                <div class="mypicture__container">
+                    <img class="picture-of-me" src="./images/me.png" alt="">
+                </div>
+            </div>
+            <div class="about-me__section">
+                <div class="about__text-container">
+                    <h1 class="inner__title about__title">
+                        About Me
+                    </h1>
+                    <p class="inner__text about__text">
+                        I can describe myself as a nice, honest and punctual person. I have good listening and communication skills and I am always up for new challenges. I am well organized and always plan ahead to make sure I manage my time well.
+                    </p>
+                </div>
+                <div class="about__button-container">
+                    <button class="about__button" type="submit" onclick="window.open('./CV.pdf')"><i class="fa-solid fa-file-arrow-down"></i>Download CV</button>
+                </div>
             </div>
         </div>
     </main>
-
-    <section id="about-me" class="about-me__section">
-        <div class="container">
-            <div class="about__text-container">
-                <h1 class="inner__title about__title">
-                    About Me
-                </h1>
-                <p class="inner__text about__text">
-                    I can describe myself as a nice, honest and punctual person. I have good listening and communication skills and I am always up for new challenges. I am well organized and always plan ahead to make sure I manage my time well.
-                </p>
-            </div>
-            <div class="about__button-container">
-                <button class="about__button" type="submit" onclick="window.open('./CV.pdf')"><i class="fa-solid fa-file-arrow-down"></i>Download CV</button>
-            </div>
-        </div>
-    </section>
 
     <section class="section__skills" id="skills-section">
         <div class="container skills-container">
@@ -83,141 +81,25 @@
                     <h1 class="inner__title skills__title">Skills</h1>
                     <p class="inner__text skills__p">I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.</p>
                 </div>
-                <div class="card__wrapper">
-
-                    <div class="progress-container">
-                        <svg class="progress" width="120" height="120">
-                          <circle class="progress-background" cx="60" cy="60" r="54"></circle>
-                          <circle class="progress-bar progress-bar-1" cx="60" cy="60" r="54"></circle>
-                        </svg>
-                        <div class="progress-text">
-                          <span class="card__number progress-percent-1">0%</span>
-                        </div>
-                        <figcaption class="card__name">HTML</figcaption>
+                <div class="skills-list__container">
+                    <div class="skills-card__container">
+                        <h4 class="skills-list__title">Tech</h4>
+                        <ul class="list-wrapper">
+                            <li class="skill-item">HTML5</li>
+                            <li class="skill-item">CSS</li>
+                            <li class="skill-item">JavaScript</li>
+                            <li class="skill-item">JQuery</li>
+                            <li class="skill-item">Git</li>
+                        </ul>
                     </div>
-
-                    <div class="progress-container">
-                        <svg class="progress-bar" width="120" height="120">
-                          <circle class="progress-background" cx="60" cy="60" r="54"></circle>
-                          <circle class="progress-bar progress-bar-2" cx="60" cy="60" r="54"></circle>
-                        </svg>
-                        <div class="progress-text">
-                          <span class="card__number progress-percent-2">0%</span>
-                        </div>
-                        <figcaption class="card__name">CSS</figcaption>
+                    <div class="skills-card__container">
+                        <h4 class="skills-list__title">Toolbox</h4>
+                        <ul class="list-wrapper">
+                            <li class="skill-item">Visual Studio Code</li>
+                            <li class="skill-item">Figma</li>
+                            <li class="skill-item">FileZilla</li>
+                        </ul>
                     </div>
-
-                    <div class="progress-container">
-                        <svg class="progress-bar" width="120" height="120">
-                          <circle class="progress-background" cx="60" cy="60" r="54"></circle>
-                          <circle class="progress-bar progress-bar-3" cx="60" cy="60" r="54"></circle>
-                        </svg>
-                        <div class="progress-text">
-                          <span class="card__number progress-percent-3">0%</span>
-                        </div>
-                        <figcaption class="card__name">JavaScript</figcaption>
-                    </div>
-
-                    <div class="progress-container">
-                        <svg class="progress-bar" width="120" height="120">
-                          <circle class="progress-background" cx="60" cy="60" r="54"></circle>
-                          <circle class="progress-bar progress-bar-4" cx="60" cy="60" r="54"></circle>
-                        </svg>
-                        <div class="progress-text">
-                          <span class="card__number progress-percent-4">0%</span>
-                        </div>
-                        <figcaption class="card__name">Figma</figcaption>
-                    </div>
-
-                    <div class="progress-container">
-                        <svg class="progress-bar" width="120" height="120">
-                          <circle class="progress-background" cx="60" cy="60" r="54"></circle>
-                          <circle class="progress-bar progress-bar-5" cx="60" cy="60" r="54"></circle>
-                        </svg>
-                        <div class="progress-text">
-                          <span class="card__number progress-percent-5">0%</span>
-                        </div>
-                        <figcaption class="card__name">FileZilla</figcaption>
-                    </div>
-
-                    <div class="progress-container">
-                        <svg class="progress-bar" width="120" height="120">
-                          <circle class="progress-background" cx="60" cy="60" r="54"></circle>
-                          <circle class="progress-bar progress-bar-6" cx="60" cy="60" r="54"></circle>
-                        </svg>
-                        <div class="progress-text">
-                          <span class="card__number progress-percent-6">0%</span>
-                        </div>
-                        <figcaption class="card__name">JQuery</figcaption>
-                    </div>
-
-                    <div class="progress-container">
-                        <svg class="progress-bar" width="120" height="120">
-                          <circle class="progress-background" cx="60" cy="60" r="54"></circle>
-                          <circle class="progress-bar progress-bar-7" cx="60" cy="60" r="54"></circle>
-                        </svg>
-                        <div class="progress-text">
-                          <span class="card__number progress-percent-7">0%</span>
-                        </div>
-                        <figcaption class="card__name">Git</figcaption>
-                    </div>
-
-                    <!-- <div class="card">
-                        <figure>
-                            <div class="card__percentage" style="--c1r: #000C24;--num:15;">
-                                <svg>
-                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
-                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
-                                </svg>
-                                <div class="card__number">
-                                    <h3>15 <span>%</span></h3>
-                                </div>
-                            </div>
-                            <figcaption class="card__name">JavaScript</figcaption>
-                        </figure>
-                    </div>
-                    <div class="card">
-                        <figure>
-                            <div class="card__percentage" style="--c1r: #000C24;--num:80;">
-                                <svg>
-                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
-                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
-                                </svg>
-                                <div class="card__number">
-                                    <h3>80 <span>%</span></h3>
-                                </div>
-                            </div>
-                            <figcaption class="card__name">Figma</figcaption>
-                        </figure>
-                    </div>
-                    <div class="card">
-                        <figure>
-                            <div class="card__percentage" style="--c1r: #000C24;--num:30;">
-                                <svg>
-                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
-                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
-                                </svg>
-                                <div class="card__number">
-                                    <h3>30 <span>%</span></h3>
-                                </div>
-                            </div>
-                            <figcaption class="card__name">Git</figcaption>
-                        </figure>
-                    </div>
-                    <div class="card">
-                        <figure>
-                            <div class="card__percentage" style="--c1r: #000C24;--num:85;">
-                                <svg>
-                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
-                                    <circle class="circle__percentage" cx="50" cy="50" r="50"></circle>
-                                </svg>
-                                <div class="card__number">
-                                    <h3>85 <span>%</span></h3>
-                                </div>
-                            </div>
-                            <figcaption class="card__name">FileZilla</figcaption>
-                        </figure>
-                    </div> -->
                 </div>
             </div>
             <div class="skills__picture-container">

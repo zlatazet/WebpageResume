@@ -21,6 +21,10 @@ a {
     color: inherit;
 }
 
+a:hover {
+  opacity: .7;
+}
+
 .inner__title {
     font-family: 'Julee', cursive;
     font-style: normal;
@@ -182,18 +186,15 @@ header::after {
 }
 
 /* Main Section */
-.main__section {
-  margin-bottom: 600px;
-}
-
 .main__container {
-  height: 1170px;
+  height: 100%;
   width: 100%;
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
+  padding: 40px;
 
-  background-image: url("../images/mainSection-bg.jpg");
+  background-image: url("../images/mainSection-bg4.jpg");
   z-index: -3;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -202,11 +203,7 @@ header::after {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-.main__text-container {
-    margin-top: 200px;
-    margin-left: 105px;
+  background-attachment: scroll;
 }
 
 .picture__circle {
@@ -216,14 +213,12 @@ header::after {
     opacity: .8;
     border-radius: 50%;
     display: inline-block;
-    position: absolute;
-    z-index: -2;
-    top: 20px;
-    left: -30px;
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
 }
 
 .main__title {
-  margin-left: 25px;
     margin-bottom: .5px;
 }
 
@@ -237,10 +232,6 @@ header::after {
     margin-top: 0;
 }
 
-.social-media__container {
-    margin-left: 50px;
-}
-
 .social-media__container a:not(:last-of-type) {
   margin-right: 18px;
 }
@@ -250,14 +241,30 @@ header::after {
   color: #928A97;
 }
 
+.mypicture__container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.picture-of-me {
+  max-width: 60%;
+  position: absolute;
+  bottom: -40px;
+  right: -140px;
+}
+
 /* About me Section */
 .about-me__section {
+  max-width: 1410px;
     background-color: #fff;
     opacity: .8;
     border-radius: 20px;
     padding: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 40px 20px auto 20px;
 }
 
 .about__text-container {
@@ -301,9 +308,10 @@ header::after {
 
 /* Section Skills */
 .section__skills {
-  margin-top: 176px;
+  margin-top: 100px;
   position: relative;
-  margin-bottom: 193px;
+  margin-bottom: 80px;
+  margin-left: 111px;
 }
 
 .skills-container {
@@ -311,14 +319,42 @@ header::after {
 }
 
 .skills__title {
-  margin: 0 auto 54px 157px;
+  margin: 0 auto 54px 17px;
 }
 
 .skills__p {
   max-width: 617px;
 
-  margin-left: 111px;
-  margin-bottom: 65px;
+  margin-bottom: 35px;
+}
+
+.skills-list__container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto;
+}
+
+.skills-card__container {
+  border: 2px solid black;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 250px;
+}
+
+.skills-list__title {
+  color: #078def;
+  font-size: 28px;
+}
+
+.list-wrapper {
+  padding-inline-start: 20px;
+  list-style-type: circle;
+  text-align: left;
+}
+
+.skill-item {
+  font-size: 19px;
+  padding: 7px;
 }
 
 .skills__picture-laptop {
@@ -332,127 +368,9 @@ header::after {
   z-index: -1;
 }
 
-.card__wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  max-width: 725px;
-  margin-left: 60px;
-}
-
-.card__wrapper .card {
-  position: relative;
-  width: 170px;
-  height: 200px;
-}
-
-.card__percentage {
-  position: relative;
-  width: 125px;
-  height: 125px;
-  transform: rotate(-270deg);
-}
-
-.card__percentage svg {
-  position: relative;
-  width: 150px;
-  height: 150px;
-}
-
-.circle__percentage {
-  width: 100%;
-  height: 100%;
-  fill: transparent;
-  stroke-width: 20;
-  stroke: rgba(146, 138, 151, 0.27);;
-  transform: translate(15px, 15px);
-}
-
-.circle__percentage:nth-child(2) {
-  stroke: var(--c1r);
-  stroke-dasharray: 300;
-  stroke-dashoffset: calc(292 - (294 * var(--num)) / 100);
-}
-
-.card__number {
-  position: absolute;
-  /* transform: rotate(270deg); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  inset: 0;
-}
-
-.card__number {
-  font-family: 'League Spartan', sans-serif;
-  font-style: normal;
-  font-weight: 100;
-  font-size: 15px;
-  line-height: 13px;
-
-  color: #928A97;
-  transform: rotate(0deg);
-}
-
-.card__name {
-  position: absolute;
-  bottom: -24px;
-  margin-top: 8px;
-  margin-left: 40px;
-
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: center;
-
-  color: #000C24;
-}
-
 .skills__picture-container {
   margin-top: 37px;
 }
-
-/* start */
-.progress-container {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  text-align: center;
-}
-
-.progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.progress-background {
-  fill: #eee;
-}
-
-.progress-bar {
-  fill: none;
-  stroke: #000C24;
-  stroke-width: 10;
-  stroke-dasharray: 339.292;
-  stroke-dashoffset: 339.292;
-  /* transform: rotate(-90deg); */
-  transform-origin: center;
-  transition: stroke-dashoffset 1s ease;
-}
-
-.progress-text {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-/* end */
 
 /* Section Form */
 .section__form {
@@ -571,7 +489,7 @@ form input.error{
   right: 30px;
   bottom: 60px;
   border-radius: 50%;
-  border: 2px dashed #000000;
+  border: 2px solid #000000;
 }
 
 .arrow-up a {
@@ -584,9 +502,6 @@ form input.error{
 }
 
 @media only screen and (max-width: 1250px) {
-  .scene {
-    right: 0;
-  }
 
   .skills__picture-laptop {
     margin-left: 30px;
@@ -602,11 +517,6 @@ form input.error{
 }
 
 @media only screen and (max-width: 1150px) {
-  .scene {
-    width: 512px;
-    height: 512px;
-  }
-
   .about__text {
     max-width: 800px;
   }
@@ -636,10 +546,6 @@ form input.error{
     margin-left: auto;
   }
 
-  .card__wrapper {
-    margin: 0 auto;
-  }
-
   .container__flex {
     max-width: 945px;
     padding-left: 30px;
@@ -660,15 +566,6 @@ form input.error{
 
   .nav__item:not(:last-of-type) {
     margin-right: 45px;
-  }
-
-  .main__container {
-    height: 1120px;
-  }
-
-  .scene {
-    width: 380px;
-    height: 380px;
   }
 
   .container__flex {
@@ -767,10 +664,6 @@ form input.error{
     margin-bottom: 20px;
   }
 
-  .scene {
-    display: none;
-  }
-
   .nav__item:not(:last-of-type) {
     margin-right: 0;
   }
@@ -832,7 +725,7 @@ form input.error{
     left: 0;
     z-index: 3;
     background: linear-gradient(to bottom, #d9e6f3, #fff);
-    height: 100px;
+    height: 80px;
     width: 100%;
   }
 
@@ -855,7 +748,11 @@ form input.error{
   }
 
   .main__container {
-    height: 1040px;
+    padding: 30px;
+  }
+
+  .picture-of-me {
+    right: 90px;
   }
 
   .about__title {
@@ -864,11 +761,6 @@ form input.error{
 
   .skills__p {
     margin-bottom: 35px;
-  }
-
-  .card__wrapper {
-    gap: 25px;
-    max-width: 560px;
   }
 
   .container__flex {
@@ -896,20 +788,26 @@ form input.error{
 }
 
 @media only screen and (max-width:750px) {
-  .picture__circle img {
-    width: 80%;
-  }
-
   .inner__text {
     max-width: inherit;
     margin-left: 10px;
     margin-right: 10px;
   }
 
+  .picture-of-me {
+    max-width: 55%;
+    right: auto;
+    left: 32px;
+  }
+
   .container__flex {
     max-width: 560px;
     display: block;
     padding-bottom: 5px;
+  }
+
+  .section__skills {
+    margin-left: 40px;
   }
 
   .section__form-container {
@@ -921,6 +819,14 @@ form input.error{
   .skills__picture-bg {
     display: none;
   }
+
+  .skills-list__title {
+    font-size: 23px;
+  }
+
+  .skill-item {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (max-width:580px) {
@@ -929,17 +835,8 @@ form input.error{
     width: 450px;
   }
 
-  .main__container {
-    height: 1060px;
-  }
-
   .section__skills {
-    margin-top: 68px;
-    margin-bottom: 33px;
-  }
-
-  .card__wrapper {
-    max-width: 365px;
+    margin: 68px auto 33px 10px;
   }
 
   .container__flex {
@@ -954,31 +851,40 @@ form input.error{
 }
 
 @media only screen and (max-width: 500px) {
-  .main__container {
-    height: 1090px;
-  }
-
   .main__text-container {
     margin-left: 35px;
   }
 
-  /* .main__section {
-    margin-bottom: 133px;
-  } */
+  .section__skills {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 
   .skills__picture-laptop img {
     width: 70%;
   }
+
+  .picture-of-me {
+    max-width: 45%;
+  }
+
+  .skills-card__container {
+    max-width: 200px;
+  }
+
+  .picture__circle {
+    height: 350px;
+    width: 350px;
+  }
 }
 
 @media only screen and (max-width: 425px) {
-  .picture__circle {
-    height: 400px;
-    width: 400px;
+  .picture-of-me {
+    max-width: 40%;
   }
 
-  .main__container {
-    height: 1115px;
+  .skills-card__container {
+    max-width: 150px;
   }
 }
 
@@ -994,10 +900,6 @@ form input.error{
 
   .header__checkbox {
     margin-top: 20px;
-  }
-
-  .card__wrapper {
-    margin-top: 30px;
   }
 
   .main__text-container {
@@ -1017,25 +919,19 @@ form input.error{
     margin-bottom: 7px;
   }
 
-  .social-media__container {
-    margin-left: 25px;
-  }
-
   .fa-brands {
     font-size: 25px;
   }
 
-  .main__container {
-    height: 960px;
-  }
-
-  .main__section {
-    margin-bottom: 560px;
-  }
-
   .picture__circle {
-    height: 350px;
-    width: 350px;
+    height: 250px;
+    width: 250px;
+    padding-top: 70px;
+  }
+
+  .picture-of-me {
+    right: 0;
+    left: auto;
   }
 
   .about__title {
@@ -1044,11 +940,6 @@ form input.error{
 
   .about__text {
     margin-bottom: 32px;
-  }
-
-  .card__wrapper .card {
-    width: 130px;
-    height: 160px;
   }
 
   .skills__picture-laptop img {
@@ -1062,28 +953,74 @@ form input.error{
   .fa-solid {
     font-size: 13px;
   }
-}
 
-@media only screen and (max-width: 395px) {
-  .main__section {
-    margin-bottom: 528px;
+  .skills-list__container {
+    margin-left: 20px;
   }
 }
 
 @media only screen and (max-width:365px) {
-
   .arrow-up .fa-solid {
     font-size: 50px;
+  }
+
+  .inner__title {
+    font-size: 31px;
+  }
+
+  .main__p {
+    font-size: 16px;
+    line-height: 27px;
+  }
+
+  .about-me__section {
+    padding: 20px;
+    margin: 40px 10px auto 10px;
+  }
+
+  .main__container {
+    padding: 10px;
+  }
+
+  .about__title {
+    margin: 10px auto 15px auto;
+  }
+
+  .about__text {
+    margin-bottom: 15px;
+  }
+
+  .inner__text {
+    font-size: 15px;
+  }
+
+  .skills-list__title {
+    font-size: 19px;
+    margin: 13px;
+  }
+
+  .skill-item {
+    font-size: 14px;
+  }
+
+  .about__button {
+    padding: 12px 16px;
+    gap: 8px;
+    font-size: 14px;
   }
 }
 
 @media only screen and (max-width: 340px) {
   .picture__circle {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
   }
 
-  .main__section {
-    margin-bottom: 492px;
+  .picture-of-me {
+    right: -84px;
+  }
+
+  .skills-card__container {
+    max-width: 120px;
   }
 }
