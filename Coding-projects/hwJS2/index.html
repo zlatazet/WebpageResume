@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+    <p id="result"></p>
+    <p id="amountOfVictories"></p>
+    <script>
+        function getComputerChoice() {
+        const choices = ['rock', 'paper', 'scissors'];
+        const randomNumber = Math.floor(Math.random() * 3);
+        return choices[randomNumber];
+        }
+
+        const rockBtn = document.querySelector('#rock');
+        rockBtn.addEventListener('click', function() {
+        playGame('rock');
+        });
+
+        const paperBtn = document.querySelector('#paper');
+        paperBtn.addEventListener('click', function() {
+        playGame('paper');
+        });
+
+        const scissorsBtn = document.querySelector('#scissors');
+        scissorsBtn.addEventListener('click', function() {
+        playGame('scissors');
+        });
+
+        let playerVictories = 0;
+        let computerVictories = 0;
+
+        function determineWinner(playerChoice, computerChoice) {
+            if (playerChoice === computerChoice) {
+                return "It's a tie!";
+            } else if (playerChoice === 'rock' && computerChoice === 'scissors' || 
+                        playerChoice === 'paper' && computerChoice === 'rock' || 
+                        playerChoice === 'scissors' && computerChoice === 'paper') {
+                playerVictories++;
+                return "You win!";
+            } else {
+                computerVictories++;
+                return "Computer wins!";
+            }
+        }
+
+        function playGame(playerChoice) {
+        const computerChoice = getComputerChoice();
+        const result = determineWinner(playerChoice, computerChoice);
+        document.querySelector('#result').textContent = result;
+        const amountOfVictories = document.querySelector('#amountOfVictories');
+        amountOfVictories.textContent = `Player won: ${playerVictories} times VS Computer won: ${computerVictories} times`;
+        }
+
+    </script>
+</body>
+</html>

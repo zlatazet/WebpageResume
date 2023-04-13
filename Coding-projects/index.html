@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coding Projects</title>
+    <title>Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Julee&family=League+Spartan:wght@100;400;500;600;700&display=swap" rel="stylesheet">
@@ -42,66 +42,83 @@
     </header>
 
     <main>
-        <div class="cointainer slideshow-container">
-            <div class="mySlides">
-                <div class="slide-leftside">
-                    <h3 class="project-name">Foundation</h3>
-                    <p class="project-description">I recently created a website using jQuery technology and animation to bring it to life. jQuery is a popular JavaScript library that allows developers to easily manipulate the DOM, handle events.<br><span class="clasification-projects">HTML, CSS</span></p>
-                    <a href="./Foundation/index.html" class="project-button" target="_parent">Give a look</a>
-                    <div class="project-footer">
-                        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angles-left"></i></a>
-                        <span class="number-text">1/4</span>
-                        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-angles-right"></i></a>
+        <div class="container main-container">
+            <div class="grid-item-1">
+                <div class="image-container">
+                    <img class="image-item" src="./images/1.png" alt="">
+                    <div class="overlay-image">
+                        <a href="./cootelsLandingPage!/index.html" class="title__image-item">Hotel landing page</a>
                     </div>
                 </div>
-                <div class="slide-rightside">
-                    <img class="project-picture" src="./images/2.png" alt="Project's picture">
-                </div>
-            </div>
-            <div class="mySlides">
-                <div class="slide-leftside">
-                    <h3 class="project-name">Hotel landing page</h3>
-                    <p class="project-description" style="margin: 0 0 10px 0;">A landing page for a hotel that is visually appealing and user-friendly. The landing page provides information about the hotel's rooms, reservations, and contact information, making it easy for users to book their stay.</p>
-                    <p class="project-description" style="margin-top: 0;">The page is optimized for mobile devices, ensuring that it looks great and functions smoothly on smartphones and tablets. This was achieved through the use of responsive design techniques, including flexible layouts and optimized media.<br><span class="clasification-projects">HTML, CSS</span></p>
-                    <a href="./cootelsLandingPage!/index.html" class="project-button" target="_parent">Give a look</a>
-                    <div class="project-footer">
-                        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angles-left"></i></a>
-                        <span class="number-text">2/4</span>
-                        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-angles-right"></i></a>
+                <h1 class="title-item">Hotel landing page</h1>
+                <p class="text-item">A landing page for a hotel that is visually appealing and user-friendly. The landing page provides information about the hotel's rooms, reservations, and contact information, making it easy for users to book their stay. <br>
+
+                The page is optimized for mobile devices, ensuring that it looks great and functions smoothly on smartphones and tablets. This was achieved through the use of responsive design techniques, including flexible layouts and optimized media.</p>
+                <div class="final-part-wrapper">
+                    <div class="classification-item-container">
+                        <span class="classification-item">HTML</span>
+                        <span class="classification-item">CSS</span>
+                        <span class="classification-item">JavaScript</span>
+                        <span class="classification-item">Responsive Design</span>
                     </div>
-                </div> 
-                <div class="slide-rightside">
-                    <img class="project-picture" src="./images/1.png" alt="">
+                    <a class="link-item" href="./cootelsLandingPage!/index.html">Give a look</a>
                 </div>
             </div>
-            <div class="mySlides">
-                <div class="slide-leftside">
-                    <h3 class="project-name">Gallery of black and white photos</h3>
-                    <p class="project-description">A gallery of selected black and white photos with an interesting effect, when hovering over the photo, it becomes colored and an outline appears.<br><span class="clasification-projects">HTML, CSS</span></p>
-                    <a href="https://github.com/zlatazet/hwCSS1" class="project-button" target="_parent">Give a look</a>
-                    <div class="project-footer">
-                        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angles-left"></i></a>
-                        <span class="number-text">3/4</span>
-                        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-angles-right"></i></a>
+
+            <div class="grid-item-2">
+                <div class="image-container">
+                    <img class="image-item" src="./images/2.png" alt="">
+                    <div class="overlay-image">
+                        <a href="./Foundation/index.html" class="title__image-item">Foundation</a>
                     </div>
-                </div> 
-                <div class="slide-rightside">
-                    <img class="project-picture" src="./images/3.png" alt="">
+                </div>
+                <h1 class="title-item">Foundation</h1>
+                <p class="text-item">I recently created a website using jQuery technology and animation to bring it to life. jQuery is a popular JavaScript library that allows developers to easily manipulate the DOM, handle events.</p>
+                <div class="final-part-wrapper">
+                    <div class="classification-item-container">
+                        <span class="classification-item">HTML</span>
+                        <span class="classification-item">CSS</span>
+                        <span class="classification-item">JavaScript</span>
+                        <span class="classification-item">Responsive Design</span>
+                        <span class="classification-item">JQuery</span>
+                    </div>
+                    <a class="link-item" href="./Foundation/index.html">Give a look</a>
                 </div>
             </div>
-            <div class="mySlides">
-                <div class="slide-leftside">
-                    <h3 class="project-name">Rock Paper Scissors game</h3>
-                    <p class="project-description">A simple game written in JS. The player chooses options, the computer chooses options randomly. You can see the score who wins.<br><span class="clasification-projects">HTML, JavaScript</span></p>
-                    <a href="https://github.com/zlatazet/FramtidstagetCourse/tree/main/hwJS2" class="project-button" target="_parent">Give a look</a>
-                    <div class="project-footer">
-                        <a class="prev" onclick="plusSlides(-1)"><i class="fa-solid fa-angles-left"></i></a>
-                        <span class="number-text">4/4</span>
-                        <a class="next" onclick="plusSlides(1)"><i class="fa-solid fa-angles-right"></i></a>
+
+            <div class="grid-item-3">
+                <div class="image-container">
+                    <img class="image-item" src="./images/3.png" alt="">
+                    <div class="overlay-image">
+                        <a href="./hwCSS1/index.html" class="title__image-item">Gallery of black and white photos</a>
                     </div>
-                </div> 
-                <div class="slide-rightside">
-                    <img class="project-picture" src="./images/4.png" alt="">
+                </div>
+                <h1 class="title-item">Gallery of black and white photos</h1>
+                <p class="text-item">A gallery of selected black and white photos with an interesting effect, when hovering over the photo, it becomes colored and an outline appears.</p>
+                <div class="final-part-wrapper">
+                    <div class="classification-item-container">
+                        <span class="classification-item">HTML</span>
+                        <span class="classification-item">CSS</span>
+                    </div>
+                    <a class="link-item" href="./hwCSS1/index.html">Give a look</a>
+                </div>
+            </div>
+
+            <div class="grid-item-4">
+                <div class="image-container">
+                    <img class="image-item" src="./images/4.png" alt="">
+                    <div class="overlay-image">
+                        <a href="./hwJS2/index.html" class="title__image-item">Rock Paper Scissors game</a>
+                    </div>
+                </div>
+                <h1 class="title-item">Rock Paper Scissors game</h1>
+                <p class="text-item">A simple game written in JS. The player chooses options, the computer chooses options randomly. You can see the score who wins</p>
+                <div class="final-part-wrapper">
+                    <div class="classification-item-container">
+                        <span class="classification-item">HTML</span>
+                        <span class="classification-item">JavaScript</span>
+                    </div>
+                    <a class="link-item" href="./hwJS2/index.html">Give a look</a>
                 </div>
             </div>
         </div>
