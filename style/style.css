@@ -67,7 +67,6 @@ a:hover {
 
 /* Header */
 header {
-    position: relative;
     display: inline-block;
     background-color: #fff;
     opacity: .8;
@@ -78,7 +77,7 @@ header {
     z-index: 2;
 }
 
-header::after {
+/* header::after {
     content: " ";
     width: 300px;
     height: 300px;
@@ -90,10 +89,21 @@ header::after {
     z-index: -1;
 
     background-repeat: no-repeat;
-}
+} */
 
 .header__container {
     margin-top: 50px;
+    position: relative;
+}
+
+.header__drop-image {
+    position: absolute;
+    display: inline-block;
+    top: -36px;
+    left: 92px;
+    z-index: -1;
+
+    background-repeat: no-repeat;
 }
 
 .nav__items-con {
@@ -376,6 +386,7 @@ header::after {
 .section__form {
   background-image: url("../images/section-bg.png");
   background-repeat: no-repeat;
+  background-size: cover;
   background-color: #fff;
   padding-top: 42px;
   padding-bottom: 28px;
